@@ -14,8 +14,8 @@ class VakTest {
     void opdracht4getCijferMetEnkeleToetsGeeftCijferTerug() {
         // Arrange
         Student testStudent = new Student();
-        Toets toets1 = new Toets();
-        toets1.studentMaaktToets(testStudent, 8);
+        var toets1 = new TestToets();
+
         Vak vak = new Vak(List.of(toets1));
 
         // Act
