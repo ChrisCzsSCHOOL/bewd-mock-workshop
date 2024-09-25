@@ -1,6 +1,7 @@
 package nl.han.se.bewd.mockworkshop.vak;
 
 import nl.han.se.bewd.mockworkshop.student.Student;
+import nl.han.se.bewd.mockworkshop.toets.FakeToets;
 import nl.han.se.bewd.mockworkshop.toets.Toets;
 import org.junit.jupiter.api.Test;
 
@@ -30,15 +31,15 @@ class VakTest {
         // Arrange
         Student testStudent = new Student();
 
-         Toets toets1 = new Toets();
+         var toets1 = new FakeToets();
          toets1.studentMaaktToets(testStudent, 8);
-         Toets toets2 = new Toets();
+         var toets2 = new FakeToets();
          toets2.studentMaaktToets(testStudent, 6);
 
-        Vak vak = new Vak(List.of(toets1, toets2));
+        Vak sut = new Vak(List.of(toets1, toets2));
 
         // Act
-        int result = vak.getVakCijferForStudent(testStudent);
+        int result = sut.getVakCijferForStudent(testStudent);
 
         // Assert
         assertEquals(7, result);

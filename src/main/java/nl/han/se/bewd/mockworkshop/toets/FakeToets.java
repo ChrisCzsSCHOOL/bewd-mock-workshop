@@ -4,7 +4,7 @@ import nl.han.se.bewd.mockworkshop.student.Student;
 
 public class FakeToets extends Toets {
 
-    int fakeReturnValue = 0;
+    int fakeReturnValue = 7;
 
     public void setReturnValueForGetToetsCijferVoorStudent(int fakeReturnvalue) {
         this.fakeReturnValue = fakeReturnvalue;
